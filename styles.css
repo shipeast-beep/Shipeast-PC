@@ -34,28 +34,28 @@ body {
 /* Záhlaví */
 header {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    padding: 60px 0;
+    padding: 40px 0; /* Zmenšený padding */
     text-align: center;
     animation: fadeIn 2s ease-in-out;
 }
 
 header .logo {
-    max-width: 600px; /* Zvětšeno na 600px */
+    max-width: 300px; /* Zmenšeno na 300px */
     height: auto; /* Zachová proporce obrázku */
     margin-bottom: 20px;
     /* Žádný stín, rámeček ani zaoblení */
-    border: none; /* Odstranění případného rámečku */
-    box-shadow: none; /* Odstranění stínu */
-    border-radius: 0; /* Odstranění zaoblení */
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 2.5em; /* Zmenšený nadpis */
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1.1em; /* Zmenšený text */
     opacity: 0.9;
 }
 
@@ -162,7 +162,7 @@ footer {
     }
 
     .logo {
-        max-width: 80%;
+        max-width: 200px; /* Menší logo na mobilních zařízeních */
     }
 
     form {
