@@ -43,7 +43,10 @@ header .logo {
     max-width: 600px; /* Zvětšeno na 600px */
     height: auto; /* Zachová proporce obrázku */
     margin-bottom: 20px;
-    /* Žádný stín ani zaoblení */
+    /* Žádný stín, rámeček ani zaoblení */
+    border: none; /* Odstranění případného rámečku */
+    box-shadow: none; /* Odstranění stínu */
+    border-radius: 0; /* Odstranění zaoblení */
 }
 
 header h1 {
