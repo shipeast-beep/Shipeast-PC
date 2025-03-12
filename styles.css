@@ -35,7 +35,7 @@ header .logo {
     max-width: 600px; /* Zvětšeno na 600px */
     height: auto; /* Zachová proporce obrázku */
     margin-bottom: 20px;
-    border-radius: 50%; /* Pokud chcete kulaté logo */
+    /* Odstraněno zaoblení */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
