@@ -32,7 +32,7 @@ header {
 }
 
 header .logo {
-    max-width: 150px; /* Nastavte šířku loga podle potřeby */
+    max-width: 600px; /* Zvětšeno na 600px */
     height: auto; /* Zachová proporce obrázku */
     margin-bottom: 20px;
     border-radius: 50%; /* Pokud chcete kulaté logo */
