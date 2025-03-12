@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #6e48aa;
+    --secondary-color: #9d50bb;
+    --background-dark: #1a1a1a;
+    --background-light: #2a2a2a;
+    --text-color: #fff;
+}
+
 /* Základní reset */
 * {
     margin: 0;
@@ -8,24 +16,24 @@
 /* Tělo stránky */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
-    color: #fff;
+    background: linear-gradient(135deg, var(--background-dark), var(--background-light));
+    color: var(--text-color);
     line-height: 1.6;
     animation: backgroundAnimation 10s infinite alternate;
 }
 
 @keyframes backgroundAnimation {
     0% {
-        background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+        background: linear-gradient(135deg, var(--background-dark), var(--background-light));
     }
     100% {
-        background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+        background: linear-gradient(135deg, var(--background-light), var(--background-dark));
     }
 }
 
 /* Záhlaví */
 header {
-    background: linear-gradient(135deg, #6e48aa, #9d50bb);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     padding: 60px 0;
     text-align: center;
     animation: fadeIn 2s ease-in-out;
@@ -35,8 +43,7 @@ header .logo {
     max-width: 600px; /* Zvětšeno na 600px */
     height: auto; /* Zachová proporce obrázku */
     margin-bottom: 20px;
-    /* Odstraněno zaoblení */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    /* Žádný stín ani zaoblení */
 }
 
 header h1 {
@@ -63,14 +70,14 @@ header p {
 
 h2 {
     text-align: center;
-    color: #9d50bb;
+    color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    background: #2a2a2a;
+    background: var(--background-light);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(110, 72, 170, 0.5);
@@ -84,22 +91,22 @@ label {
 input, select, textarea {
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #6e48aa;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     background: #333;
-    color: #fff;
+    color: var(--text-color);
     transition: border-color 0.3s ease;
 }
 
 input:focus, select:focus, textarea:focus {
-    border-color: #9d50bb;
+    border-color: var(--secondary-color);
 }
 
 button {
     margin-top: 20px;
     padding: 10px;
-    background: #6e48aa;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--text-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -108,7 +115,7 @@ button {
 }
 
 button:hover {
-    background: #9d50bb;
+    background: var(--secondary-color);
     transform: scale(1.05);
 }
 
@@ -116,7 +123,7 @@ button:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background: #2a2a2a;
+    background: var(--background-light);
     margin-top: 50px;
     animation: fadeIn 3s ease-in-out;
 }
@@ -138,5 +145,24 @@ footer {
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+/* Responzivita */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .logo {
+        max-width: 80%;
+    }
+
+    form {
+        padding: 15px;
     }
 }
