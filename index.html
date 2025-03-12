@@ -3,67 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shipeast Builds - Počítače na míru pro každého. Sestavte si svůj ideální počítač s naší pomocí.">
     <title>Shipeast Builds - Počítače na míru</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-    <div class="container">
-        <img 
-            src="logo.png" 
-            alt="Shipeast Builds Logo" 
-            class="logo" 
-            width="600" 
-            height="600" 
-            loading="lazy"
-            style="border: none; box-shadow: none;" <!-- Explicitní odstranění stylů -->
-        >
-        <h1>Shipeast Builds</h1>
-        <p>Počítače na míru pro každého</p>
-    </div>
+    <header role="banner">
+        <div class="container">
+            <img 
+                src="logo.png" 
+                alt="Shipeast Builds Logo" 
+                class="logo" 
+                width="300" 
+                height="300" 
+                loading="lazy"
+            >
+            <h1>Shipeast Builds</h1>
+            <p>Počítače na míru pro každého</p>
+        </div>
     </header>
 
-    <section class="form-section">
-        <div class="container">
-            <h2>Dotazník pro nezávaznou poptávku</h2>
-            <form id="pcForm" action="https://formspree.io/f/mvgkpjpo" method="POST">
-                <!-- Skryté pole pro vlastní předmět e-mailu -->
-                <input type="hidden" name="_subject" value="Nová poptávka na PC">
+    <main role="main">
+        <section class="form-section">
+            <div class="container">
+                <h2>Dotazník pro nezávaznou poptávku</h2>
+                <form id="pcForm" action="https://formspree.io/f/mvgkpjpo" method="POST">
+                    <!-- Skryté pole pro vlastní předmět e-mailu -->
+                    <input type="hidden" name="_subject" value="Nová poptávka na PC">
 
-                <!-- Pole formuláře -->
-                <label for="budget">Jaký je váš rozpočet?</label>
-                <input type="text" id="budget" name="budget" required>
+                    <!-- Pole formuláře -->
+                    <label for="budget">Jaký je váš rozpočet?</label>
+                    <input type="text" id="budget" name="budget" required aria-required="true">
 
-                <label for="purpose">Jaké bude hlavní využití PC?</label>
-                <select id="purpose" name="purpose" required>
-                    <option value="gaming">Herní PC</option>
-                    <option value="work">Pracovní PC</option>
-                </select>
+                    <label for="purpose">Jaké bude hlavní využití PC?</label>
+                    <select id="purpose" name="purpose" required aria-required="true">
+                        <option value="gaming">Herní PC</option>
+                        <option value="work">Pracovní PC</option>
+                    </select>
 
-                <label for="color">Preferovaná barva:</label>
-                <select id="color" name="color" required>
-                    <option value="black">Černá</option>
-                    <option value="white">Bílá</option>
-                </select>
+                    <label for="color">Preferovaná barva:</label>
+                    <select id="color" name="color" required aria-required="true">
+                        <option value="black">Černá</option>
+                        <option value="white">Bílá</option>
+                    </select>
 
-                <label for="rgb">Chcete RGB osvětlení?</label>
-                <select id="rgb" name="rgb" required>
-                    <option value="yes">Ano</option>
-                    <option value="no">Ne</option>
-                </select>
+                    <label for="rgb">Chcete RGB osvětlení?</label>
+                    <select id="rgb" name="rgb" required aria-required="true">
+                        <option value="yes">Ano</option>
+                        <option value="no">Ne</option>
+                    </select>
 
-                <label for="software">Jaké programy budou na PC běžet?</label>
-                <textarea id="software" name="software" rows="4" required></textarea>
+                    <label for="software">Jaké programy budou na PC běžet?</label>
+                    <textarea id="software" name="software" rows="4" required aria-required="true"></textarea>
 
-                <label for="email">Váš e-mail:</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="email">Váš e-mail:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
 
-                <button type="submit">Odeslat poptávku</button>
-            </form>
-        </div>
-    </section>
+                    <button type="submit">Odeslat poptávku</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <p>&copy; 2025 Shipeast Builds. Všechna práva vyhrazena.</p>
         </div>
